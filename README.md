@@ -4,56 +4,64 @@ Automation testing project untuk Paybo menggunakan Playwright dengan struktur Pa
 
 ## 📋 Prerequisites
 
-- Node.js v16+ 
+- Node.js v16+
 - npm atau yarn
 - Git
 
 ## 🚀 Setup Instructions
 
 ### 1. Clone Repository
+
 ```bash
 git clone <repository-url>
 cd paybo-automation
 ```
 
 ### 2. Install Dependencies
+
 ```bash
 npm install
 ```
 
 ### 3. Setup Environment Variables
+
 ```bash
 # Buat file .env dari template
 cp .env.example .env
 
 # Edit .env dan masukkan credentials
-# PAYBO_EMAIL=demo_psp3@mail.com
-# PAYBO_PASSWORD=E8rP4qA3
+# PAYBO_EMAIL=
+# PAYBO_PASSWORD=
 ```
 
 ### 4. Jalankan Test
 
 **Jalankan semua test:**
+
 ```bash
 npm test
 ```
 
 **Jalankan test dengan UI mode (recommended):**
+
 ```bash
 npm run test:ui
 ```
 
 **Jalankan test dalam mode headed (browser visible):**
+
 ```bash
 npm run test:headed
 ```
 
 **Jalankan test dengan debug mode:**
+
 ```bash
 npm run test:debug
 ```
 
 **Lihat test report:**
+
 ```bash
 npm run test:report
 ```
@@ -83,6 +91,7 @@ paybo-automation/
 ### playwright.config.js
 
 **Key Configurations:**
+
 - **testDir**: `./tests` - Lokasi test files
 - **timeout**: 30 seconds per test
 - **retries**: 0 pada local, 2 pada CI
@@ -92,6 +101,7 @@ paybo-automation/
 - **video**: Retain on failure
 
 **Supported Browsers:**
+
 - Chromium
 - Firefox
 - WebKit (Safari)
@@ -114,21 +124,25 @@ Setelah test selesai, reports tersedia di:
 ## 🛠️ Troubleshooting
 
 ### Error: Cannot find module 'dotenv'
+
 ```bash
 npm install dotenv
 ```
 
 ### Playwright browser tidak terinstall
+
 ```bash
 npx playwright install
 ```
 
 ### Timeout pada navigation
+
 - Pastikan URL endpoint benar
 - Cek network connectivity
 - Increase timeout dalam config
 
 ### Selector tidak ditemukan
+
 - Gunakan `npx playwright codegen` untuk generate selectors
 - Inspect element di browser untuk verify selector
 
