@@ -1,0 +1,52 @@
+{
+  // Editor settings
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.rulers": [80, 120],
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.trimAutoWhitespace": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+
+  // File settings
+  "files.exclude": {
+    "node_modules": true,
+    ".playwright": true,
+    "test-results": true,
+    "playwright-report": true
+  },
+  "files.watcherExclude": {
+    "**/node_modules": true,
+    "**/.playwright": true,
+    "**/test-results": true,
+    "**/playwright-report": true
+  },
+
+  // Prettier settings
+  "prettier.semi": true,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "es5",
+  "prettier.arrowParens": "always",
+
+  // Search settings
+  "search.exclude": {
+    "node_modules": true,
+    "test-results": true,
+    "playwright-report": true,
+    ".playwright": true
+  },
+
+  // JavaScript settings
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.suggest.autoImports": true,
+
+  // ESLint settings
+  "eslint.validate": ["javascript", "javascriptreact"],
+
+  // Playwright Test for VS Code
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "name": "paybo-automation",
+  "version": "1.0.0",
+  "description": "Automation testing untuk Paybo menggunakan Playwright dengan Page Object Model",
+  "author": "QA Team",
+  "license": "MIT",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:headed": "playwright test --headed",
+    "test:headed:ui": "playwright test --headed --ui",
+    "test:chromium": "playwright test --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:webkit": "playwright test --project=webkit",
+    "test:report": "playwright show-report",
+    "test:codegen": "playwright codegen https://bo-dev-p1.paybo.io/login",
+    "test:inspector": "playwright inspector",
+    "lint": "eslint tests/**/*.js",
+    "format": "prettier --write tests/**/*.js",
+    "clean": "rm -rf test-results playwright-report .playwright"
+  },
+  "keywords": [
+    "paybo",
+    "automation",
+    "playwright",
+    "testing",
+    "e2e",
+    "qa",
+    "page-object-model"
+  ],
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "dotenv": "^16.0.3"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prastowoardi/paybo-automation.git"
+  },
+  "bugs": {
+    "url": "https://github.com/prastowoardi/paybo-automation/issues"
+  },
+  "homepage": "https://github.com/prastowoardi/paybo-automation#readme"
+}
